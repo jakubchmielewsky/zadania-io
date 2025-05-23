@@ -14,9 +14,31 @@ bool czy_pierwsza(int n) {
   return true;
 }
 
+void menu() {
+  int option;
+  cout << "[1]- sprawdz czy pierwsza" << endl;
+  cin >> option;
+
+  switch (option) {
+  case 1:
+    int n;
+    cout << "Podaj liczbe: ";
+    cin >> n;
+    if (czy_pierwsza(n)) {
+      cout << "pierwsza" << endl;
+    } else {
+      cout << " nie pierwsza" << endl;
+    }
+    break;
+
+  default:
+    break;
+  }
+}
+
 int main() {
 
-  cout << "Hello world" << endl;
+  menu();
 
   return 0;
 }
